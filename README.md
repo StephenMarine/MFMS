@@ -29,13 +29,12 @@ municipal financial management functionality.
 
 | Student | Student Number | Responsibility |
 |---|---|---|
-| Stephen | 223101605 | Integration and Validation |
+| Stephen | 223101605 | Integration, Validation, Testing and Documentation |
 | Ismael | 224057626 | Employee Management |
 | Lovemore | 226073831 | Budget Management |
 | Absalom | 221124675 | Supplier Management |
 | Namupala | 225019388 | Asset Management |
 | Ileka | 224036998 | Reports |
-| Stephen | 223101605 | Testing and Documentation |
 
 ## Compilation
 
