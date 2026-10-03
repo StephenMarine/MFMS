@@ -36,7 +36,7 @@ municipal financial management functionality.
 | Ismael | 224057626 | Employee Management |
 | Lovemore | 226073831 | Budget Management |
 | Absalom | 221124675 | Supplier Management |
-| Namupala | 225019388 | Asset Management |
+| Namupala | 225019388 | Asset Management and Utilities |
 | Ileka | 224036998 | Reports |
 
 ## Compilation
