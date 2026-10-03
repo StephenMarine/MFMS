@@ -44,4 +44,4 @@ municipal financial management functionality.
 The project will be compiled using GCC.
 
 ```bash
-gcc -std=c99 -Wall -Wextra -o mfms main.c employees.c budget.c suppliers.c assets.c reports.c
+gcc -std=c99 -Wall -Wextra -pedantic main.c employees.c budget.c suppliers.c assets.c reports.c utilities.c -o mfms
