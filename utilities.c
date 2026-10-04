@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include "utilities.h"
-  --------------------------------------------------------- */
+
 int readInt(const char *prompt)
 {
     int value, result;
