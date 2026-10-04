@@ -1,9 +1,3 @@
-/* =========================================================
-   reports.c
-   Reports module implementation.
-   Calls report functions exposed by other modules.
-   ========================================================= */
-
 #include <stdio.h>
 #include "reports.h"
 #include "employees.h"
@@ -12,9 +6,6 @@
 #include "assets.h"
 #include "utilities.h"
 
-/* ---------------------------------------------------------
-   reportsMenu
-   --------------------------------------------------------- */
 void reportsMenu(void)
 {
     int choice = 0;

@@ -1,32 +1,20 @@
-/* =========================================================
-   budget.c
-   Budget module implementation.
-   ========================================================= */
 
 #include <stdio.h>
 #include <string.h>
 #include "budget.h"
 #include "utilities.h"
 
-/* ---------------------------------------------------------
-   Private data
-   --------------------------------------------------------- */
 static char   budgetDepts[MAX_BUDGETS][50];
 static double budgetAllocated[MAX_BUDGETS];
 static double budgetSpent[MAX_BUDGETS];
 static int    budgetCount = 0;
 
-/* ---------------------------------------------------------
-   calculateRemaining
-   --------------------------------------------------------- */
+
 double calculateRemaining(double allocated, double spent)
 {
     return allocated - spent;
 }
 
-/* ---------------------------------------------------------
-   budgetMenu
-   --------------------------------------------------------- */
 void budgetMenu(void)
 {
     int choice = 0;
@@ -50,9 +38,6 @@ void budgetMenu(void)
     } while (choice != 3);
 }
 
-/* ---------------------------------------------------------
-   addBudget
-   --------------------------------------------------------- */
 void addBudget(void)
 {
     if (budgetCount >= MAX_BUDGETS)
@@ -73,9 +58,6 @@ void addBudget(void)
     printf("\nBudget recorded successfully.\n");
 }
 
-/* ---------------------------------------------------------
-   displayBudgets
-   --------------------------------------------------------- */
 void displayBudgets(void)
 {
     if (budgetCount == 0)
@@ -101,9 +83,6 @@ void displayBudgets(void)
     }
 }
 
-/* ---------------------------------------------------------
-   budgetReport
-   --------------------------------------------------------- */
 void budgetReport(void)
 {
     if (budgetCount == 0)

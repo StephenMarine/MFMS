@@ -3,7 +3,6 @@
 #include "suppliers.h"
 #include "utilities.h"
 
-
 static int  supplierIDs[MAX_SUPPLIERS];
 static char supplierNames[MAX_SUPPLIERS][50];
 static char supplierEmails[MAX_SUPPLIERS][50];
@@ -36,7 +35,6 @@ void supplierMenu(void)
         }
     } while (choice != 4);
 }
-
 
 void addSupplier(void)
 {
@@ -80,12 +78,11 @@ void displaySuppliers(void)
                supplierIDs[i], supplierNames[i], supplierEmails[i],
                supplierPhones[i], supplierTowns[i]);
 
-        /* Week 7 requirement: use strlen() */
+        
         printf("       (name length: %d characters)\n",
                (int) strlen(supplierNames[i]));
     }
 }
-
 
 void searchSupplier(void)
 {
@@ -102,12 +99,12 @@ void searchSupplier(void)
 
     for (int i = 0; i < supplierCount; i++)
     {
-       
+        
         if (strcmp(supplierNames[i], searchName) == 0)
         {
             char description[200];
 
-            
+    
             strcpy(description, supplierNames[i]);
 
             
@@ -130,8 +127,6 @@ void searchSupplier(void)
     if (!found)
         printf("\nNo supplier found with name \"%s\".\n", searchName);
 }
-
-
 void supplierReport(void)
 {
     if (supplierCount == 0)
