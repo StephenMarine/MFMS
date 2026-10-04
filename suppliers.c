@@ -1,16 +1,9 @@
-/* =========================================================
-   suppliers.c
-   Supplier module implementation.
-   ========================================================= */
-
 #include <stdio.h>
 #include <string.h>
 #include "suppliers.h"
 #include "utilities.h"
 
-/* ---------------------------------------------------------
-   Private data
-   --------------------------------------------------------- */
+
 static int  supplierIDs[MAX_SUPPLIERS];
 static char supplierNames[MAX_SUPPLIERS][50];
 static char supplierEmails[MAX_SUPPLIERS][50];
@@ -18,9 +11,7 @@ static char supplierPhones[MAX_SUPPLIERS][20];
 static char supplierTowns[MAX_SUPPLIERS][50];
 static int  supplierCount = 0;
 
-/* ---------------------------------------------------------
-   supplierMenu
-   --------------------------------------------------------- */
+
 void supplierMenu(void)
 {
     int choice = 0;
@@ -46,9 +37,7 @@ void supplierMenu(void)
     } while (choice != 4);
 }
 
-/* ---------------------------------------------------------
-   addSupplier
-   --------------------------------------------------------- */
+
 void addSupplier(void)
 {
     if (supplierCount >= MAX_SUPPLIERS)
@@ -71,9 +60,7 @@ void addSupplier(void)
     printf("\nSupplier added successfully.\n");
 }
 
-/* ---------------------------------------------------------
-   displaySuppliers
-   --------------------------------------------------------- */
+
 void displaySuppliers(void)
 {
     if (supplierCount == 0)
@@ -99,9 +86,7 @@ void displaySuppliers(void)
     }
 }
 
-/* ---------------------------------------------------------
-   searchSupplier
-   --------------------------------------------------------- */
+
 void searchSupplier(void)
 {
     char searchName[50];
@@ -117,15 +102,15 @@ void searchSupplier(void)
 
     for (int i = 0; i < supplierCount; i++)
     {
-        /* Week 7 requirement: use strcmp() */
+       
         if (strcmp(supplierNames[i], searchName) == 0)
         {
             char description[200];
 
-            /* Week 7 requirement: use strcpy() */
+            
             strcpy(description, supplierNames[i]);
 
-            /* Week 7 requirement: use strcat() */
+            
             strcat(description, " operates in ");
             strcat(description, supplierTowns[i]);
 
@@ -146,9 +131,7 @@ void searchSupplier(void)
         printf("\nNo supplier found with name \"%s\".\n", searchName);
 }
 
-/* ---------------------------------------------------------
-   supplierReport
-   --------------------------------------------------------- */
+
 void supplierReport(void)
 {
     if (supplierCount == 0)
