@@ -1,16 +1,10 @@
-/* =========================================================
-   employees.c
-   Employee module implementation.
-   ========================================================= */
+
 
 #include <stdio.h>
 #include <string.h>
 #include "employees.h"
 #include "utilities.h"
 
-/* ---------------------------------------------------------
-   Private data (only accessible inside this file)
-   --------------------------------------------------------- */
 static int    employeeIDs[MAX_EMPLOYEES];
 static char   employeeNames[MAX_EMPLOYEES][50];
 static char   employeeDepts[MAX_EMPLOYEES][50];
@@ -19,17 +13,12 @@ static double employeeHousing[MAX_EMPLOYEES];
 static double employeeTransport[MAX_EMPLOYEES];
 static int    employeeCount = 0;
 
-/* ---------------------------------------------------------
-   calculateSalary
-   --------------------------------------------------------- */
+
 double calculateSalary(double basic, double housing, double transport)
 {
     return basic + housing + transport;
 }
 
-/* ---------------------------------------------------------
-   employeeMenu
-   --------------------------------------------------------- */
 void employeeMenu(void)
 {
     int choice = 0;
@@ -55,9 +44,6 @@ void employeeMenu(void)
     } while (choice != 4);
 }
 
-/* ---------------------------------------------------------
-   addEmployee
-   --------------------------------------------------------- */
 void addEmployee(void)
 {
     if (employeeCount >= MAX_EMPLOYEES)
@@ -82,9 +68,6 @@ void addEmployee(void)
     printf("\nEmployee added successfully.\n");
 }
 
-/* ---------------------------------------------------------
-   displayEmployees
-   --------------------------------------------------------- */
 void displayEmployees(void)
 {
     if (employeeCount == 0)
@@ -108,9 +91,6 @@ void displayEmployees(void)
     }
 }
 
-/* ---------------------------------------------------------
-   searchEmployee
-   --------------------------------------------------------- */
 void searchEmployee(void)
 {
     int searchID;
@@ -150,9 +130,6 @@ void searchEmployee(void)
         printf("\nNo employee found with ID %d.\n", searchID);
 }
 
-/* ---------------------------------------------------------
-   employeeReport
-   --------------------------------------------------------- */
 void employeeReport(void)
 {
     if (employeeCount == 0)

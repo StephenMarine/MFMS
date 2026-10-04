@@ -1,16 +1,8 @@
-/* =========================================================
-   assets.c
-   Asset module implementation.
-   ========================================================= */
-
 #include <stdio.h>
 #include <string.h>
 #include "assets.h"
 #include "utilities.h"
 
-/* ---------------------------------------------------------
-   Private data
-   --------------------------------------------------------- */
 static int    assetIDs[MAX_ASSETS];
 static char   assetNames[MAX_ASSETS][50];
 static char   assetTypes[MAX_ASSETS][50];
@@ -19,9 +11,6 @@ static char   assetDepts[MAX_ASSETS][50];
 static char   assetConditions[MAX_ASSETS][20];
 static int    assetCount = 0;
 
-/* ---------------------------------------------------------
-   calculateTotalAssetValue
-   --------------------------------------------------------- */
 double calculateTotalAssetValue(void)
 {
     double total = 0.0;
@@ -30,9 +19,6 @@ double calculateTotalAssetValue(void)
     return total;
 }
 
-/* ---------------------------------------------------------
-   assetMenu
-   --------------------------------------------------------- */
 void assetMenu(void)
 {
     int choice = 0;
@@ -63,9 +49,6 @@ void assetMenu(void)
     } while (choice != 5);
 }
 
-/* ---------------------------------------------------------
-   addAsset
-   --------------------------------------------------------- */
 void addAsset(void)
 {
     if (assetCount >= MAX_ASSETS)
@@ -91,9 +74,6 @@ void addAsset(void)
     printf("\nAsset added successfully.\n");
 }
 
-/* ---------------------------------------------------------
-   displayAssets
-   --------------------------------------------------------- */
 void displayAssets(void)
 {
     if (assetCount == 0)
@@ -117,9 +97,6 @@ void displayAssets(void)
     printf("\nTotal asset value: %.2f\n", calculateTotalAssetValue());
 }
 
-/* ---------------------------------------------------------
-   searchAsset
-   --------------------------------------------------------- */
 void searchAsset(void)
 {
     char searchName[50];
@@ -154,9 +131,6 @@ void searchAsset(void)
         printf("\nNo asset found with name \"%s\".\n", searchName);
 }
 
-/* ---------------------------------------------------------
-   assetReport
-   --------------------------------------------------------- */
 void assetReport(void)
 {
     if (assetCount == 0)
